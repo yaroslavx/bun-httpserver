@@ -1,3 +1,8 @@
-export const SimpleComponent = () => {
-    return <div>just simple component for testing server side rendering</div>
+export const SimpleComponent = ({ height, weight, name, img }: { height: number; weight: number; name: string; img: string }) => {
+    return <div>
+        <h1>{name}</h1>
+        <img src={img} alt={name} />
+        <p>Height: {height}</p>
+        <p>Weight: {weight}</p>
+    </div>
 }
